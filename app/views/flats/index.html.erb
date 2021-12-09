@@ -1,0 +1,15 @@
+<h1>All our flats (<%= @flats.count %>)</h1>
+
+<div class="card-container" style="display:flex">
+<% @flats.each do |flat| %>
+  <div class="card" style="width: 18rem;">
+    <img src="https://picsum.photos/200/150" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title"><%= flat.name %></h5>
+      <h6 class="card-subtitle mb-2 text-muted"><%= flat.address %></h6>
+      <p class="card-text"> <%= flat.description %></p>
+      <a href="#" class="btn btn-primary">Go somewhere</a>
+    </div>
+  </div>
+  <% end %>
+</div>
